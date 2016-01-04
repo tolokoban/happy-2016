@@ -1,0 +1,336 @@
+body {
+    background-color: #000;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 2s;
+    -ms-transition: all 2s;
+    -webkit-transition: all 2s;
+}
+header, footer {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-shadow: 1vh 1vh rgba(0,0,0,.5);
+    font-size: 15vh;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    font-family: sans-serif;
+    transition: all 3.5s;
+    -ms-transition: all 3.5s;
+    -webkit-transition: all 3.5s;
+}
+header {
+    top: 0;
+    transform: translateY(-100%);
+}
+footer {
+    bottom: 0;
+    transform: translateY(100%);
+}
+div.perso {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 50vw;
+}
+div.perso  div {
+    position: absolute;
+    background-repeat:   no-repeat;
+    background-position: 50% 50%;
+    background-size:     100% 100%;
+}
+div.perso  .back.arm   { z-index: 1; }
+div.perso  .back.leg2  { z-index: 2; }
+div.perso  .back.leg1  { z-index: 3; }
+div.perso  .front.leg2 { z-index: 4; }
+div.perso  .front.leg1 { z-index: 5; }
+div.perso  .body       { z-index: 6; }
+div.perso  .head       { z-index: 7; }
+div.perso  .front.arm  { z-index: 8; }
+
+#F {
+    top: 20vh;
+    transform-origin: 4vh 20vh;
+    transform: translate(5vw, 0) rotate(0deg);
+}
+#F .head  { 
+    background-image:    url(head1.png);
+    width: 7vh;
+    height: 7vh;
+    left: 1vh;
+    top: -5vh;
+}
+#F .body  { 
+    background-image:    url(corps1.png);
+    width: 9.25vh; /* 185 */
+    height: 23vh;  /* 460 */
+    left: 0;
+    top: 0;
+}
+#F .arm  { 
+    width: 6.25vh; /* 125 */
+    height: 25vh;  /* 500 */
+    left: 2vh;
+    top: 2.2vh;
+    transform-origin: 4vh 2vh;
+    transform: rotate(0deg);
+}
+#F .arm1  { 
+    background-image: url(bras1.png);
+    background-size: 6.25vh 25vh;
+    background-position: 0 0;
+    width: 6.25vh; /* 125 */
+    height: 13vh;  /* 500 */
+    left: 0;
+    top: 0;
+}
+#F .arm2  { 
+    background-image: url(bras1.png);
+    background-size: 6.25vh 25vh;
+    background-position: 0 -13vh;
+    width: 6.25vh; /* 125 */
+    height: 13vh;  /* 500 */
+    left: 0vh;
+    top: 13vh;
+    transform-origin: 1.6vh 0vh;
+    transform: rotate(0deg);
+}
+#F .leg {
+    width: 0;
+    height: 0;
+    left: 1.2vh;
+    top: 18vh;
+    transform-origin: 2vh 4vh;
+    transform: rotate(0deg);
+}
+#F .leg1 {
+    background-image: url(cuisse1.png);
+    width: 8.1vh;  /* 172 */
+    height: 18vh;  /* 500 */
+    left: 0;
+    top: 0;
+}
+#F .leg2 {
+    background-image: url(jambe1.png);  
+    width: 7vh; /* 235 */
+    height: 12.8vh;  /* 512 */
+    left: -1.2vh;
+    top: 17vh;
+    transform-origin: 3.5vh 0vh;
+    transform: rotate(0deg);
+}
+
+
+#K {
+    transform: translate(25vw, 0) rotate(0deg);
+    top: 24vh;
+}
+#K .head  { 
+    background-image:    url(head2.png);
+    width: 7vh;
+    height: 7vh;
+    left: 1vh;
+    top: -5vh;
+}
+#K .body  { 
+    background-image:    url(corps2.png);
+    width: 9.25vh; /* 185 */
+    height: 20vh;  /* 460 */
+    left: 0;
+    top: 0;
+}
+#K .arm  { 
+    background-image: url(bras2.png);
+    width: 6.25vh; /* 125 */
+    height: 22vh;  /* 500 */
+    left: 2vh;
+    top: 2.2vh;
+    transform-origin: 4vh 2vh;
+    transform: rotate(0deg);
+}
+#K .leg {
+    width: 0;
+    height: 0;
+    left: 1.2vh;
+    top: 15vh;
+    transform-origin: 2vh 2.5vh;
+    transform: rotate(0deg);
+}
+#K .leg1 {
+    background-image: url(cuisse2.png);
+    width: 8.1vh;  /* 172 */
+    height: 17vh;  /* 500 */
+    left: 0;
+    top: 0;
+}
+#K .leg2 {
+    background-image: url(jambe2.png);  
+    width: 7vh; /* 235 */
+    height: 12.8vh;  /* 512 */
+    left: -1.2vh;
+    top: 16vh;
+    transform-origin: 3.5vh 0vh;
+    transform: rotate(0deg);
+}
+
+
+#M {
+    transform: translate(45vw, 0) rotate(0deg);
+    top: 22vh;
+}
+#M .head  { 
+    background-image:    url(head3.png);
+    width: 7vh;
+    height: 7vh;
+    left: 1vh;
+    top: -5vh;
+}
+#M .body  { 
+    background-image:    url(corps3.png);
+    width: 9vh; /* 185 */
+    height: 21vh;  /* 460 */
+    left: 0;
+    top: 0;
+}
+#M .arm  { 
+    background-image: url(bras3.png);
+    width: 6.25vh; /* 125 */
+    height: 23vh;  /* 500 */
+    left: 2vh;
+    top: 2.2vh;
+    transform-origin: 4vh 2vh;
+    transform: rotate(0deg);
+}
+#M .leg {
+    width: 0;
+    height: 0;
+    left: 1.2vh;
+    top: 17vh;
+    transform-origin: 2vh 4vh;
+    transform: rotate(0deg);
+}
+#M .leg1 {
+    background-image: url(cuisse3.png);
+    width: 8.1vh;  /* 172 */
+    height: 18vh;  /* 500 */
+    left: 0;
+    top: 0;
+}
+#M .leg2 {
+    background-image: url(jambe3.png);  
+    width: 7vh; /* 235 */
+    height: 11.8vh;  /* 512 */
+    left: -1.2vh;
+    top: 17vh;
+    transform-origin: 3.5vh 0vh;
+    transform: rotate(0deg);
+}
+
+
+#A {
+    transform: translate(65vw, 0) rotate(0deg);
+    top: 23vh;
+}
+#A .head  { 
+    background-image:    url(head4.png);
+    width: 7vh;
+    height: 7vh;
+    left: 1vh;
+    top: -5vh;
+}
+#A .body  { 
+    background-image:    url(corps4.png);
+    width: 8.5vh; /* 185 */
+    height: 20.5vh;  /* 460 */
+    left: 0;
+    top: 0;
+}
+#A .arm  { 
+    background-image: url(bras4.png);
+    width: 6.25vh; /* 125 */
+    height: 22.5vh;  /* 500 */
+    left: 2vh;
+    top: 2.2vh;
+    transform-origin: 4vh 2vh;
+    transform: rotate(0deg);
+}
+#A .leg {
+    width: 0;
+    height: 0;
+    left: 1.2vh;
+    top: 17vh;
+    transform-origin: 2vh 4vh;
+    transform: rotate(0deg);
+}
+#A .leg1 {
+    background-image: url(cuisse4.png);
+    width: 8.1vh;  /* 172 */
+    height: 17.75vh;  /* 500 */
+    left: 0;
+    top: 0;
+}
+#A .leg2 {
+    background-image: url(jambe4.png);  
+    width: 7vh; /* 235 */
+    height: 11.3vh;  /* 512 */
+    left: -1.2vh;
+    top: 16.5vh;
+    transform-origin: 3.5vh 0vh;
+    transform: rotate(0deg);
+}
+
+
+#H {
+    transform: translate(85vw, 0) rotate(0deg);
+    top: 35vh;
+}
+#H .head  { 
+    background-image:    url(head5.png);
+    width: 6vh;
+    height: 6vh;
+    left: .2vh;
+    top: -4.5vh;
+}
+#H .body  { 
+    background-image:    url(corps5.png);
+    width: 7vh; /* 185 */
+    height: 17vh;  /* 460 */
+    left: 0;
+    top: 0;
+}
+#H .arm  { 
+    background-image: url(bras5.png);
+    width: 4vh; /* 125 */
+    height: 18vh;  /* 500 */
+    left: 2vh;
+    top: 2.2vh;
+    transform-origin: 2vh 0vh;
+    transform: rotate(0deg);
+}
+#H .leg {
+    width: 0;
+    height: 0;
+    left: 1.5vh;
+    top: 14vh;
+    transform-origin: 1.7vh 1vh;
+    transform: rotate(0deg);
+}
+#H .leg1 {
+    background-image: url(cuisse5.png);
+    width: 5vh;  /* 172 */
+    height: 10vh;  /* 500 */
+    left: 0;
+    top: 0;
+}
+#H .leg2 {
+    background-image: url(jambe5.png);  
+    width: 4.5vh; /* 235 */
+    height: 10vh;  /* 512 */
+    left: -1.1vh;
+    top: 9vh;
+    transform-origin: 2.5vh 0vh;
+    transform: rotate(0deg);
+}
+
