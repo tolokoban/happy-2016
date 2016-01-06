@@ -56,10 +56,10 @@ div.perso  .front.arm  { z-index: 8; }
 }
 #F .head  { 
     background-image:    url(head1.png);
-    width: 12vh;
-    height: 14vh;
+    width: 11vh;
+    height: 15vh;
     left: -1vh;
-    top: -11vh;
+    top: -12vh;
     transform-origin: 4vh 13vh;
 }
 #F .body  { 
