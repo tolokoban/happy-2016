@@ -1,11 +1,11 @@
 // Animation frame in milliseconds.
 var FRAME = 500;
 
-window.addEventListener("DOMContentLoaded", function() {
-    document.querySelector('header').style.transform = "translateY(0)";
+function start() {
+    document.body.removeChild(document.querySelector('header'));
     document.querySelector('footer').style.transform = "translateY(0)";
-    document.body.style.backgroundColor = "#756";
-    
+    document.body.style.backgroundColor = "rgb(195, 179, 187)";
+
     var F = new Perso('F');
     var K = new Perso('K');
     var M = new Perso('M');
@@ -27,6 +27,7 @@ window.addEventListener("DOMContentLoaded", function() {
     persos.forEach(function (perso) {
         var period = .5 + .2 * Math.random();
         var time = period;
+        perso.rotate(5, 'H', 0);
         while (time < 5.5) {
             perso.rotate(time, 'Af', 45);
             perso.rotate(time, 'Ab', -45);
@@ -89,12 +90,14 @@ window.addEventListener("DOMContentLoaded", function() {
     F.rotate(6 + Math.random()*.5, 'L2f', noise(-120));
     F.rotate(6 + Math.random()*.5, 'L2b', noise(-120));
 
+    F.rotate(5, 'H', 0);
     F.rotate(7 + Math.random()*.5, 'A2f', noise(0));
     F.rotate(7 + Math.random()*.5, 'A2b', noise(0));
 
     F.rotate(7.5 + Math.random()*.5, 'A2f', noise(-40));
     F.rotate(7.5 + Math.random()*.5, 'A2b', noise(-40));
     F.move(7.5, xF, 10);
+    F.rotate(7, 'H', -35);
 
     persos.forEach(function (perso) {
         perso.start();
@@ -110,7 +113,7 @@ window.addEventListener("DOMContentLoaded", function() {
         });
     };
     anim();
-});
+};
 
 
 var Perso = function(id) {
@@ -237,12 +240,11 @@ Perso.prototype.play = function() {
         } else {
             child = this._children[id];
             if (!child) continue;
-            ang = interpolate(this._rotate[id], t, this._seeds[id][0], this._seeds[id][1], .3);
+            ang = interpolate(this._rotate[id], t, this._seeds[id][0], this._seeds[id][1], .7);
             tr = "rotate(" + ang + "deg)";
             child.style.transform = tr;
         }
     }
-    console.log(transform);
     this._elem.style.transform = transform;
 };
 
@@ -266,3 +268,27 @@ Perso.prototype.rotate = function(t, id, ang) {
 function noise(v) {
     return v * (.95 + .1 * Math.random());
 }
+
+
+window.addEventListener("DOMContentLoaded", function() {
+    var images = ["footer.png"];
+    for (var loop=1 ; loop<6 ; loop++) {
+        ['bras', 'corps', 'cuisse', 'head', 'jambe'].forEach(function (name) {
+            images.push(name + loop + ".png");
+        });
+
+    }
+    var count = 0;
+    var onload = function() {
+        count++;
+        if (count >= images.length) {
+            window.setTimeout(start, 1000);            
+        }
+    };
+    images.forEach(function (name) {
+        var img = new Image();
+        img.onload = onload;
+        img.onerror = onload;
+        img.src = name;
+    });
+});

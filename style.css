@@ -12,7 +12,7 @@ header, footer {
     left: 0;
     width: 100%;
     text-shadow: 1vh 1vh rgba(0,0,0,.5);
-    font-size: 15vh;
+    font-size: 5vh;
     color: #fff;
     font-weight: 700;
     text-align: center;
@@ -20,13 +20,12 @@ header, footer {
     transition: all 3.5s;
     -ms-transition: all 3.5s;
     -webkit-transition: all 3.5s;
+    bottom: 0;
 }
 header {
-    top: 0;
-    transform: translateY(-100%);
+    padding-bottom: 3vh;
 }
 footer {
-    bottom: 0;
     transform: translateY(100%);
 }
 div.perso {
@@ -53,14 +52,15 @@ div.perso  .front.arm  { z-index: 8; }
 #F {
     top: 20vh;
     transform-origin: 4vh 20vh;
-    transform: translate(5vw, 0) rotate(0deg);
+    transform: translate(0vw, 0) rotate(0deg);
 }
 #F .head  { 
     background-image:    url(head1.png);
-    width: 7vh;
-    height: 7vh;
-    left: 1vh;
-    top: -5vh;
+    width: 12vh;
+    height: 14vh;
+    left: -1vh;
+    top: -11vh;
+    transform-origin: 4vh 13vh;
 }
 #F .body  { 
     background-image:    url(corps1.png);
@@ -124,15 +124,16 @@ div.perso  .front.arm  { z-index: 8; }
 
 
 #K {
-    transform: translate(25vw, 0) rotate(0deg);
+    transform: translate(15vw, 0) rotate(0deg);
     top: 24vh;
 }
 #K .head  { 
     background-image:    url(head2.png);
-    width: 7vh;
-    height: 7vh;
-    left: 1vh;
-    top: -5vh;
+    width: 14vh;
+    height: 14vh;
+    left: -1.8vh;
+    top: -12vh;
+    transform-origin: 4.5vh 8vh;
 }
 #K .body  { 
     background-image:    url(corps2.png);
@@ -177,15 +178,15 @@ div.perso  .front.arm  { z-index: 8; }
 
 
 #M {
-    transform: translate(45vw, 0) rotate(0deg);
+    transform: translate(30vw, 0) rotate(0deg);
     top: 22vh;
 }
 #M .head  { 
     background-image:    url(head3.png);
-    width: 7vh;
-    height: 7vh;
-    left: 1vh;
-    top: -5vh;
+    width: 13vh;
+    height: 14vh;
+    left: -1vh;
+    top: -11.5vh;
 }
 #M .body  { 
     background-image:    url(corps3.png);
@@ -230,15 +231,16 @@ div.perso  .front.arm  { z-index: 8; }
 
 
 #A {
-    transform: translate(65vw, 0) rotate(0deg);
+    transform: translate(-15vw, 0) rotate(0deg);
     top: 23vh;
 }
 #A .head  { 
     background-image:    url(head4.png);
-    width: 7vh;
-    height: 7vh;
-    left: 1vh;
-    top: -5vh;
+    width: 12vh;
+    height: 19vh;
+    left: -2vh;
+    top: -11vh;
+    z-index: 9;
 }
 #A .body  { 
     background-image:    url(corps4.png);
@@ -283,15 +285,15 @@ div.perso  .front.arm  { z-index: 8; }
 
 
 #H {
-    transform: translate(85vw, 0) rotate(0deg);
+    transform: translate(-30vw, 0) rotate(0deg);
     top: 35vh;
 }
 #H .head  { 
     background-image:    url(head5.png);
-    width: 6vh;
-    height: 6vh;
-    left: .2vh;
-    top: -4.5vh;
+    width: 12vh;
+    height: 15vh;
+    left: -2vh;
+    top: -8vh;
 }
 #H .body  { 
     background-image:    url(corps5.png);
