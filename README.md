@@ -44,4 +44,26 @@ I positionned the rotation center of each body's part with CSS. HEre is an examp
 }
 ```
 In order to make my animation work on every kind of screen size, I use the unit `vh` which is relative to the display height. `100vh` is equivalent to the full display height.
+Why did I use `vh` instead of `vw`? Because I wanted prevent overlapping of the _Bonne Année_ and the 5 characters, and because most of the targeted displays are in landscape mode. For phones or tablets, it is easy to turn it if the scene overflows horizontally on portrait displays.
+
+
+After trying to use CSS transitions, I found easier to use direct Javascript for the animation. So I wrote the class __`Perso`__ in order to _program_ sequential animations.
+```js
+/**
+ * Move linearly to `(x, y)`. This target must be reached at time `t`.
+ */
+Perso.prototype.move = function(t, x, y)
+```
+```js
+/**
+ * Rotate to angle `ang` the body's part `id`. This target must be reached at time `t`.
+ */
+Perso.prototype.rotate = function(t, id, ang)
+```
+
+To prevent animation to stop, I add random move and rotation when the program ends.
+Because I want smooth rotations and not noisy, I used `cosines`:
+```js
+return value + radius * (Math.cos(-t * seed1) + Math.sin(t * seed2));
+```
 
