@@ -62,7 +62,7 @@ Perso.prototype.rotate = function(t, id, ang)
 ```
 
 To prevent animation to stop, I add random move and rotation when the program ends.
-Because I want smooth rotations and not noisy, I used `cosines`:
+Because I wanted smooth rotations and not noisy, I used `cosines`:
 ```js
 return value + radius * (Math.cos(-t * seed1) + Math.sin(t * seed2));
 ```
